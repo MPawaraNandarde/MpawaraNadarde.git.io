@@ -1,0 +1,301 @@
+<html>
+<head>
+<script src="http://localhost:8080/jquery-3.3.1.min.js"></script>
+<script>
+/*
+$(document).ready(function(){
+$("#fd").hide();
+$("#nextpage").click(function(){
+$("#fd").show();
+$("#hidelf").click(function(){
+$("#fd").hide();
+});
+});
+
+
+});
+*/
+</script>
+<title>first login with database</title>
+<style>
+body{
+margin:0;
+padding:0;
+background:#7A7A7A;
+}
+#fd{
+position:absolute;
+width:700px;
+height:900px;
+background:#F0F0F0;
+top:150px;
+left:140px;
+box-shadow:0px 40px 45px 26px rgba(230,230,230,0.5);
+overflow: hidden;
+}
+#fname{
+position:absolute;
+width:450px;
+height:70px;
+background:#F0F0F0;
+top:150px;
+left:200px;
+border-left:0px solid #F0F0F0;
+border-right:0px solid #F0F0F0;
+border-top:0px solid #F0F0F0;
+border-bottom:2px solid white;
+box-shadow:0px 3px 2px 1.5px #2294FF;
+border-radius:5px;
+text-decoration:none;
+font-size:40px;
+}
+#fname:hover{
+box-shadow: 0px 0px 15px 2px #2294FF;
+}
+#name{
+position:absolute;
+top:120px;
+left:20px;
+font-size:33px;
+font-weight:bold;
+font-style:normal;
+font-family:arial;
+}
+
+
+#lname{
+position:absolute;
+width:450px;
+height:70px;
+background:#F0F0F0;
+top:270px;
+left:200px;
+border-left:0px solid #F0F0F0;
+border-right:0px solid #F0F0F0;
+border-top:0px solid #F0F0F0;
+border-bottom:2px solid white;
+box-shadow:0px 3px 2px 1.5px #2294FF;
+border-radius:5px;
+text-decoration:none;
+font-size:40px;
+}
+#lname:hover{
+box-shadow: 0px 0px 15px 2px #2294FF;
+}
+#lnamet{
+position:absolute;
+top:250px;
+left:20px;
+font-size:33px;
+font-weight:bold;
+font-style:normal;
+font-family:arial;
+}
+
+
+
+
+#uemail{
+position:absolute;
+width:450px;
+height:70px;
+background:#F0F0F0;
+top:390px;
+left:200px;
+border-left:0px solid #F0F0F0;
+border-right:0px solid #F0F0F0;
+border-top:0px solid #F0F0F0;
+border-bottom:2px solid white;
+box-shadow:0px 3px 2px 1.5px #2294FF;
+border-radius:5px;
+text-decoration:none;
+font-size:30px;
+}
+#uemail:hover{
+box-shadow: 0px 0px 15px 2px #2294FF;
+}
+#emailt{
+position:absolute;
+top:370px;
+left:50px;
+font-size:33px;
+font-weight:bold;
+font-style:normal;
+font-family:arial;
+}
+
+
+#upass{
+position:absolute;
+width:450px;
+height:70px;
+background:#F0F0F0;
+top:530px;
+left:200px;
+border-left:0px solid #F0F0F0;
+border-right:0px solid #F0F0F0;
+border-top:0px solid #F0F0F0;
+border-bottom:2px solid white;
+box-shadow:0px 3px 2px 1.5px #2294FF;
+border-radius:5px;
+text-decoration:none;
+font-size:40px;
+}
+#upass:hover{
+box-shadow: 0px 0px 15px 2px #2294FF;
+}
+#passt{
+position:absolute;
+top:510px;
+left:30px;
+font-size:33px;
+font-weight:bold;
+font-style:normal;
+font-family:arial;
+}
+
+
+#ureligion{
+position:absolute;
+width:450px;
+height:70px;
+background:#619FFF;
+top:680px;
+left:200px;
+font-weight: bold;
+font-size:50px;
+text-align:center;
+
+}
+#religiont{
+position:absolute;
+top:660px;
+left:45px;
+font-size:33px;
+font-weight:bold;
+font-style:normal;
+font-family:arial;
+
+}
+#sub{
+position:absolute;
+width:450px;
+height:70px;
+background:#10B6FF;
+top:800px;
+left:20px;
+font-weight: bold;
+font-size:50px;
+text-align:center;
+border-radius:7px;
+box-shadow:0px 0px 18px 3px #B8B8B8;
+}
+#sub:hover{
+box-shadow:0px 0px 33px 5px #10B6FF;
+}
+#singin{
+position:absolute;
+top:770px;
+left:520px;
+font-weight: bold;
+font-size:40px;
+font-style:italic;
+font-family:normal;
+}
+#loginback{
+position:absolute;
+width:400px;
+height:70px;
+background:yellow;
+top:20px;
+left:-80px;
+transform: skewX(-30deg);
+}
+#logint{
+position:absolute;
+top:-60px;
+left:170px;
+font-weight: bold;
+font-size:60px;
+font-style:italic;
+font-family:normal;
+color:white;
+transform: skewX(30deg);
+text-shadow:0px 0px 17px #FF4A81;
+}
+#nextpage{
+position:absolute;
+width:300px;
+height:150px;
+background:#FFE100;
+top:40%;
+left:340px;
+}
+#next{
+position:absolute;
+font-size:100px;
+font-family:normal;
+font-weight:bold;
+color:white;
+top:-80px;
+left:30px;
+}
+#hidelf{
+position:absolute;
+width:100px;
+height:100px;
+background:#FFE100;
+top:0.2%;
+left:600px;
+
+}
+#hidelf span{
+position:absolute;
+font-size:160px;
+font-family:normal;
+font-weight:bold;
+color:red;
+top:-46px;
+left:06px;
+transform:rotate(45deg);
+
+}
+</style>
+</head>
+<body>
+<div id="nextpage"><p id="next">NEXT</p>
+</div>
+
+<div id="fd">
+<div id="hidelf">
+<span>+</span>
+</div>
+<div id="loginback">
+<p id="logint">Log In</p>
+</div>
+<form action="first login with database.php" method="post">
+<p id="name">First Name</p><input type="text" name="fname" id="fname"/>
+<p id="lnamet">Last Name</p><input type="text" name="lname" id="lname"/>
+
+<p id="emailt">Email</p><input type="email" name="uemail" id="uemail"/>
+
+<p id="passt">Password</p><input type="password" name="upass" id="upass"/>
+<p id="religiont">Religion</p><select name="ureligion" id="ureligion">
+
+<option value="india">India</option>
+<option value="Afganistan">Afganistan</option>
+<option value="Alaska">Alaska</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="Russia">Russia</option>
+<option value="U.K.">U.K.</option>
+<option value="U.S.A.">U.S.A.</option>
+</select>
+<input type="submit" id="sub">
+<a href="#"><p id="singin">sing in</p></a>
+</form>
+
+</div>
+
+</body>
+</html>
